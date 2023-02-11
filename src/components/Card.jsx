@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../App.css";
 function Card() {
-    const[data,setData]=useState({});
+   //  const[data,setData]=useState({});
     const[pokemondata,setPokemondata]=useState([]);
     const[next,setNext]=useState();
     const[prev,setPrev]=useState();
@@ -19,13 +19,20 @@ function Card() {
     };
     const getdata= async()=>{
        const response = await fetch(url);
-       setData(await response.json());
+      //  setData(await response.json());
+       const data= await response.json();
        getPokemon(data.results);
        setNext(data.next);
        setPrev(data.previous);
     };
   useEffect(()=>{
-     getdata();
+   let unsb = false;  
+    if(!unsb){
+      getdata();
+    }
+    return ()=>{
+      unsb=true;
+    };
   },[url]);
 
   return (
@@ -45,9 +52,9 @@ function Card() {
             pokemondata.map((pdata)=>{
                 return <div className='col'>
                    <img className='col-row1' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pdata.id}.svg`} alt="" />
-                   <h1>POKEDEX</h1>
+                   <h1>{pdata.name}</h1>
                   <div className='col-row2'> 
-                  <h2>{pdata.name}</h2>
+                  <h2>POKEDEX</h2>
                    <h2>(Type : {pdata.types[0].type.name})</h2>
                    </div>
                    <div className="col-row3">

@@ -16,6 +16,7 @@
 }
 .btns{
   text-align: center;
+  background-color: bisque;
 }
 button{
   padding: 10px;
@@ -51,4 +52,12 @@ img{
 }
 .col-row4-col{
   margin: 10px;
+}
+.header{
+  text-align: center;
+  background-color: bisque;
+}
+.header img{
+  width:300px;
+  height: 100px;
 }
