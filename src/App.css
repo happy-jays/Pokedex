@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(https://images7.alphacoders.com/661/661986.jpg);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.col{
+  width:30%;
+  margin:20px;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.btns{
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  padding: 10px;
+  margin:5px;
+  background-color: chartreuse;
+  border-radius:10px;
+}
+img{
+  width: 50%;
+  height:55%;
+  margin: 10px;
+  background-color: aliceblue;
+  border-radius:100px;
+}
+.col-row2{
+  background-color: cornflowerblue;
+  padding:10px;
+  width: 100%;
+  text-align: center;
+}
+.col-row3{
+  display: flex;
+}
+.col-row3-col{
+  margin: 10px;
+  background-color: aquamarine;
+  padding: 6px;
+  border-radius:10px;
+}
+.col-row4{
+  display: flex;
+  border: 2px solid lightgray;
+}
+.col-row4-col{
+  margin: 10px;
 }
